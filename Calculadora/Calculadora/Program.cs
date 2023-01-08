@@ -55,13 +55,57 @@
             Console.WriteLine($"O resultado da multiplicação é: {multiplicacao}");
         }
 
+        static void Resto(double valor = 0, double valor2 = 0)
+        {
+            Console.Write("Primeiro valor: ");
+            valor = double.Parse(Console.ReadLine());
+
+            Console.Write("Segundo valor: ");
+            valor2 = double.Parse(Console.ReadLine());
+
+            double modulo = valor % valor2;
+
+            Console.WriteLine($"O resto da divisão é: {modulo}");
+        }
+
+        static void Menu(string resposta = "") 
+        {
+            Console.Write("Você quer fazer quais operações?\n\n");
+            Console.WriteLine("Somar + ");
+            Console.WriteLine("Subtrair - ");
+            Console.WriteLine("Dividir / ");
+            Console.WriteLine("Multiplicar * ");
+            Console.WriteLine("Resto % \n");
+            Console.Write("Digite o sinal: ");
+            resposta = Console.ReadLine();
+
+            switch (resposta)
+            {
+                case "+":
+                    Somar();
+                    break;
+                case "-":
+                    Subtracao();
+                    break;
+                case "*":
+                    Multiplicacao();
+                    break;
+                case "/":
+                    Divisao();
+                    break;
+                case "%":
+                    Resto();
+                    break;
+                default:
+                    System.Environment.Exit(0);
+                    break;
+
+            }
+        }
+
         static void Main(string[] args) 
         {
-
-            Somar();
-            Subtracao();
-            Divisao();
-
+            Menu();
         }
     }
 }
