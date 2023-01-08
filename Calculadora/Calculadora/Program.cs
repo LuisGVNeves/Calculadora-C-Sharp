@@ -70,12 +70,13 @@
 
         static void Menu(string resposta = "") 
         {
+            Console.WriteLine("\n------------- CALCULADORA C# -------------\n");
             Console.Write("Você quer fazer quais operações?\n\n");
-            Console.WriteLine("Somar + ");
-            Console.WriteLine("Subtrair - ");
-            Console.WriteLine("Dividir / ");
-            Console.WriteLine("Multiplicar * ");
+            Console.WriteLine("Somar +          |       Subtrair - ");
+            Console.WriteLine("Dividir /        |       Multiplicar * ");
             Console.WriteLine("Resto % \n");
+            Console.WriteLine("\n    ----------------------------------\n");
+
             Console.Write("Digite o sinal: ");
             resposta = Console.ReadLine();
 
